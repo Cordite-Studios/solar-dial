@@ -1,9 +1,9 @@
 {-# LANGUAGE DeriveDataTypeable #-}
-module Solar.Cast.Internal.Time where
+module Solar.Dial.Internal.Time where
 
 import Data.Time
 import Control.Concurrent.STM
-import Solar.Utility.Delta
+import Solar.Dial.Delta
 import Control.Concurrent
 import Data.Typeable
 import Control.Exception as E

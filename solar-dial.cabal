@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 -- The name of the package.
-name:                solar-wind
+name:                solar-dial
 
 -- The package version.  See the Haskell package versioning policy (PVP) 
 -- for standards guiding when and how versions should be incremented.
@@ -13,7 +13,7 @@ name:                solar-wind
 version:             0.1.0.0
 
 -- A short (one-line) description of the package.
-synopsis:            A foundation for a broadcasting / subscription framework
+synopsis:            Timing helpers and a clock that updates STM time values
 
 -- A longer description of the package.
 -- description:         
@@ -34,7 +34,7 @@ maintainer:          me@levischuck.com
 -- A copyright notice.
 -- copyright:           
 
-category:            Web, Solar
+category:            System, Concurrency
 
 build-type:          Simple
 
@@ -47,18 +47,13 @@ cabal-version:       >= 1.10
 
 library
   -- Modules exported by the library.
-  exposed-modules:     Solar.Cast
-                     , Solar.Cast.Channel
-                     , Solar.Cast.Event
-                     , Solar.Cast.Server
-                     , Solar.Cast.Client
-                     , Solar.Cast.Time
-                     , Solar.Cast.Internal.Time
-                     , Solar.Utility.Delta
-                     , Solar.Utility.Wait
+  exposed-modules:     Solar.Dial.Time
+                     , Solar.Dial.Internal.Time
+                     , Solar.Dial.Delta
+                     , Solar.Dial.Wait
   
   -- Modules included in this library but not exported.
-  other-modules:       Solar.Utility.Date
+  -- other-modules:       
                      
   
   -- LANGUAGE extensions used by modules in this package.
@@ -67,8 +62,6 @@ library
   -- Other library packages from which modules are imported.
   build-depends:       base >=4.6 && <4.7
                      , stm
-                     , containers
-                     , bytestring
                      , time
   
   -- Directories containing source files.
@@ -88,7 +81,7 @@ test-suite tests
   hs-source-dirs:       tests
   main-is:              Main.hs
   ghc-options:          -Wall -threaded 
-  build-depends:        solar-wind
+  build-depends:        solar-dial
                       , tasty
                       , tasty-quickcheck
                       , tasty-hunit

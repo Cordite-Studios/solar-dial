@@ -1,5 +1,4 @@
-{-# LANGUAGE CPP #-}
-module Solar.Cast.Time
+module Solar.Dial.Time
     (   -- * Structures
       Tick(..)
     , Ticker(..)
@@ -19,11 +18,11 @@ module Solar.Cast.Time
     )
 where
 
-import Solar.Cast.Internal.Time
+import Solar.Dial.Internal.Time
 
 import Control.Concurrent.STM
-import Solar.Utility.Delta
-import Solar.Utility.Wait
+import Solar.Dial.Delta
+import Solar.Dial.Wait
 import Data.Time
 import Control.Monad
 import Control.Concurrent

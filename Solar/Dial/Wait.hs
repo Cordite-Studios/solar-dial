@@ -1,4 +1,4 @@
-module Solar.Utility.Wait where
+module Solar.Dial.Wait where
 
 import System.Timeout
 import Control.Concurrent

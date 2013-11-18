@@ -1,4 +1,4 @@
-module Solar.Utility.Delta where
+module Solar.Dial.Delta where
 
 data DeltaContainer a b = DeltaContainer
     { content :: a

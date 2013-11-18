@@ -15,12 +15,12 @@ import System.Timeout
 -- import Control.Concurrent
 
 -- This library imports
-import Solar.Cast.Time
-import Solar.Cast.Internal.Time
-import Solar.Utility.Delta
+import Solar.Dial.Time
+import Solar.Dial.Internal.Time
+import Solar.Dial.Delta
 
 time :: TestTree
-time = testGroup "Solar.Cast.Time"
+time = testGroup "Solar.Dial.Time"
     [ testCase "Construct ticker" $ do
         tc <- mkNewTicker
         t <- readTVarIO tc
