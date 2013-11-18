@@ -1,6 +1,6 @@
 
-import Solar.Cast.Time
-import Solar.Cast.Internal.Time
+import Solar.Dial.Time
+import Solar.Dial.Internal.Time
 
 mkDemoTicker time i' = do
     let i = fromInteger i'
